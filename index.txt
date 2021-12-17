@@ -7,17 +7,16 @@ L’unica pecca è che lo scanner non ha il fronte-retro automatico e mi tocca f
 
 START
 
--Dirigersi verso lo scanner
--Aprire il coperchio
--*SE* ci sono fogli 
-    -*SE* il foglio ha elementi sia nel fronte che nel retro
-        -Poggiamo fronte pagina
-        -Avvio scansione
-        -poggiamo retro pagina
-        -avvio scansione
-    *ALTRIMENTI*
-        -Poggiamo solo fronte
-        -avvio scansione
--*ALTRIMENTI*
-
-END
+Dirigersi verso lo scanner
+1.  *SE* lo scanner *NON* è acceso?
+        Accendere lo scanner
+    *ALTRIMENTI* Aprire il coperchio
+2.  //*SE* ci sono fogli da scannerizzare
+        Poggia fronte pagina
+        Avvio scansione
+3.      //*SE* Scansionato entrambi i lati?
+            Aggiungo il foglio alla pila degli scansionati
+4.       //*ALTRIMENTI* *SE* E' presente contenuto nel retro?
+            Poggia retro pagina e scansiona
+                        *ALTRIMENTI* aggiungo il foglio alla pila degli scansionati
+    //*ALTRIMENTI*  END
